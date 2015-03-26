@@ -1,6 +1,6 @@
 import core from 'launch-cloud-core';
 
-import DOWrapper from 'do-wrapper-browser';
+import digitalocean from 'provider-digitalocean/.dist/provider/browser';
 
 import request from 'browser-request';
 
@@ -14,13 +14,9 @@ const proxies = {
 module.exports = (providerConfigs, log) => {
   if (providerConfigs === undefined || providerConfigs === null) throw Error('Must provide a providerConfigs object!');
 
-  const api = core({
-    providerApis: {
-      amazon: null,
-      digitalocean: DOWrapper,
-      google: null,
-      microsoft: null,
-      rackspace: null
+  const launchCloud = core({
+    providers: {
+      digitalocean: digitalocean()
     },
     providerConfigs,
     log,
@@ -28,5 +24,19 @@ module.exports = (providerConfigs, log) => {
     proxies
   });
 
-  return api;
+  // const launchCloud = core({
+  //   providerApis: {
+  //     amazon: null,
+  //     digitalocean: DOWrapper,
+  //     google: null,
+  //     microsoft: null,
+  //     rackspace: null
+  //   },
+  //   providerConfigs,
+  //   log,
+  //   request,
+  //   proxies
+  // });
+
+  return launchCloud;
 };
