@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "browser-request": "^0.3.3",
-    "launch-cloud-core": "^0.0.1",
+    "launch-cloud-core": "0.0.1",
     "provider-digitalocean": "0.0.2"
   }
 }
