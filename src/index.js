@@ -24,19 +24,5 @@ module.exports = (providerConfigs, log) => {
     proxies
   });
 
-  // const launchCloud = core({
-  //   providerApis: {
-  //     amazon: null,
-  //     digitalocean: DOWrapper,
-  //     google: null,
-  //     microsoft: null,
-  //     rackspace: null
-  //   },
-  //   providerConfigs,
-  //   log,
-  //   request,
-  //   proxies
-  // });
-
   return launchCloud;
 };
