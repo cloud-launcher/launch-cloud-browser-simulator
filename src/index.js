@@ -1,6 +1,6 @@
 import core from 'launch-cloud-core';
 
-import digitalocean from 'provider-digitalocean/.dist/provider/browser';
+import digitalocean from 'provider-digitalocean/.dist/provider/simulator';
 
 import request from 'browser-request';
 

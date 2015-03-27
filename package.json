@@ -1,7 +1,7 @@
 {
-  "name": "launch-cloud-browser",
-  "version": "0.0.3",
-  "description": "launch-cloud for your browser",
+  "name": "launch-cloud-browser-simulator",
+  "version": "0.0.1",
+  "description": "launch-cloud-simulator for your browser",
   "main": ".dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
