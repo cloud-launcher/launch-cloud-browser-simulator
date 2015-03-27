@@ -1,6 +1,6 @@
 {
   "name": "launch-cloud-browser-simulator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "launch-cloud-simulator for your browser",
   "main": ".dist/index.js",
   "scripts": {
