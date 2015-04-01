@@ -19,6 +19,7 @@ module.exports = (function(providerConfigs, log) {
     request: request,
     proxies: proxies
   });
+  launchCloud.isSimulator = true;
   return launchCloud;
 });
 

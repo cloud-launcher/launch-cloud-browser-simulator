@@ -44,6 +44,7 @@
     "gulp-tasks": "0.0.2",
     "gulp-traceur": "^0.17.0",
     "gulp-util": "^3.0.4",
+    "lodash": "^3.6.0",
     "minimist": "^1.1.1",
     "traceur": "0.0.87",
     "traceur-runtime": "0.0.59",

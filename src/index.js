@@ -24,5 +24,7 @@ module.exports = (providerConfigs, log) => {
     proxies
   });
 
+  launchCloud.isSimulator = true;
+
   return launchCloud;
 };

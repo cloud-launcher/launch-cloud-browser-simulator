@@ -1,5 +1,7 @@
-const gulp = require('gulp'),
-      minimist = require('minimist');
+const {dependencies} = require('./package.json'),
+      gulp = require('gulp'),
+      minimist = require('minimist'),
+      _ = require('lodash');
 
 const {
   cached,
@@ -29,7 +31,10 @@ gulp.task('default', ['build']);
 
 gulp.task('build', sequence('clean', 'runtime'));
 
-gulp.task('dev', ['runtime'], () => gulp.watch(paths.scripts, ['runtime']));
+gulp.task('dev', ['runtime'], () => {
+  gulp.watch(paths.scripts, ['runtime']);
+  gulp.watch(paths.dependencies, ['runtime']);
+});
 
 gulp.task('run', () => run(`node ${paths.dist}/index.js ${args.args || ''}`).exec());
 
@@ -73,5 +78,6 @@ gulp.task('clean',
 
 const paths = {
   scripts: ['src/**/*.js'],
+  dependencies: _.map(dependencies, (version, dependency) => { return `./node_modules/${dependency}/.dist/*.js`; } ),
   dist: '.dist'
 };
